@@ -11,7 +11,7 @@
     <body>
         <header class="bg-gray-900 text-gray-100 py-4 shadow-lg">
             <div class="container mx-auto flex justify-between items-center">
-                <h1 class="text-xl font-bold">My site</h1>
+                <h1 class="text-xl font-bold">HackU</h1>
                 <nav>
                     <ul class="flex space-x-4">
                         <li><a href="#" class="nav-link text-gray-400 hover:text-white transition duration-300">Home</a>
@@ -31,21 +31,23 @@
             <section class="fade-in">
                 <h2 class="text-3xl font-bold mb-4">Links</h2>
                 <ul class="space-y-4">
-                    <li><a href="#" class="link-item text-xl hover:text-yellow-400 transition duration-300">GitHub</a></li>
-                    <li><a href="#" class="link-item text-xl hover:text-yellow-400 transition duration-300">LinkedIn</a>
+                    <li><a  href="https://github.com/d-r-e"
+                            class="link-item text-xl hover:text-yellow-400 transition duration-300"
+                            rel="noopener" 
+                            target="_blank">GitHub</a>
+                        </li>
                     </li>
-                    <li><a href="#" class="link-item text-xl hover:text-yellow-400 transition duration-300">Twitter</a></li>
                     <li><a href="#" class="link-item text-xl hover:text-yellow-400 transition duration-300">Blog</a></li>
                 </ul>
             </section>
         </main>
     
         <footer class="bg-gray-900 text-gray-400 py-4 text-center">
-            <p>&copy; 2024 My Professional Site. All rights reserved.</p>
+            <p id="copyright-footer-p">&copy;<span id="copyright-year"></span> Hacku.org </p>
         </footer>
     
         <script>
-            // Add any JavaScript here if needed for more interactions
+            document.querySelector('#copyright-year').textContent = new Date().getFullYear();
         </script>
     </body>
     
