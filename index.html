@@ -1,54 +1,101 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="style" src="style.css">
-            <meta charset="UTF-8">
-            <script src="https://cdn.tailwindcss.com"></script>
+<html lang="en">
 
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    
-    <body>
-        <header class="bg-gray-900 text-gray-100 py-4 shadow-lg">
-            <div class="container mx-auto flex justify-between items-center">
-                <h1 class="text-xl font-bold">HackU</h1>
-                <nav>
-                    <ul class="flex space-x-4">
-                        <li><a href="#" class="nav-link text-gray-400 hover:text-white transition duration-300">Home</a>
-                        </li>
-                        <li><a href="#" class="nav-link text-gray-400 hover:text-white transition duration-300">About</a>
-                        </li>
-                        <li><a href="#" class="nav-link text-gray-400 hover:text-white transition duration-300">Projects</a>
-                        </li>
-                        <li><a href="#" class="nav-link text-gray-400 hover:text-white transition duration-300">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    
-        <main class="container mx-auto py-10">
-            <section class="fade-in">
-                <h2 class="text-3xl font-bold mb-4">Links</h2>
-                <ul class="space-y-4">
-                    <li><a  href="https://github.com/d-r-e"
-                            class="link-item text-xl hover:text-yellow-400 transition duration-300"
-                            rel="noopener" 
-                            target="_blank">GitHub</a>
-                        </li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackU</title>
+<script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-900 text-gray-100 font-roboto">
+    <header class="bg-gray-900 text-gray-100 py-4 shadow-lg fixed w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">HackU</h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="nav-link text-gray-400 hover:text-white transition duration-300">Home</a>
                     </li>
-                    <li><a href="#" class="link-item text-xl hover:text-yellow-400 transition duration-300">Blog</a></li>
+                    <li><a href="#" class="nav-link text-gray-400 hover:text-white transition duration-300">About</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-gray-400 hover:text-white transition duration-300">Projects</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-gray-400 hover:text-white transition duration-300">Contact</a>
+                    </li>
                 </ul>
-            </section>
-        </main>
-    
-        <footer class="bg-gray-900 text-gray-400 py-4 text-center">
-            <p id="copyright-footer-p">&copy;<span id="copyright-year"></span> Hacku.org </p>
-        </footer>
-    
-        <script>
-            document.querySelector('#copyright-year').textContent = new Date().getFullYear();
-        </script>
-    </body>
-    
-    </html>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-400 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="md:hidden bg-gray-900 text-gray-100 py-4">
+        <ul class="space-y-4">
+            <li><a href="#" class="nav-link text-gray-400 hover:text-white transition duration-300 block">Home</a></li>
+            <li><a href="#" class="nav-link text-gray-400 hover:text-white transition duration-300 block">About</a></li>
+            <li><a href="#" class="nav-link text-gray-400 hover:text-white transition duration-300 block">Projects</a>
+            </li>
+            <li><a href="#" class="nav-link text-gray-400 hover:text-white transition duration-300 block">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <main class="container mx-auto py-20 px-4">
+        <section class="fade-in">
+            <h2 class="text-3xl font-bold mb-4">Links</h2>
+            <ul class="space-y-4">
+                <li><a href="https://github.com/d-r-e"
+                        class="link-item text-xl hover:text-blue-400 transition duration-300" rel="noopener"
+                        target="_blank">GitHub</a></li>
+                <li><a href="https://rncp.hacku.org/rncp"
+                        class="link-item text-xl hover:text-blue-400 transition duration-300" rel="noopener"
+                        target="_blank">RNCP Planner</a></li>
+                <li><a href="https://d-r-e.github.io/mitre-tarot/"
+                        class="link-item text-xl hover:text-blue-400 transition duration-300" rel="noopener"
+                        target="_blank">MITRE ATT&CK Tarot</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-4 text-center border-t border-gray-800">
+        <p id="copyright-footer-p">&copy;<span id="copyright-year"></span> Hacku.org </p>
+    </footer>
+
+    <button id="back-to-top"
+        class="fixed bottom-10 right-10 bg-blue-500 text-white p-2 rounded-full shadow-lg hover:bg-blue-600 transition duration-300"
+        title="Back to top">↑</button>
+
+    <script>
+        document.querySelector('#copyright-year').textContent = new Date().getFullYear();
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('hidden');
+            } else {
+                backToTopBtn.classList.add('hidden');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>
