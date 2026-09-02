@@ -1,102 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HackU</title>
-<script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body class="bg-gray-900 text-gray-100 font-roboto">
-    <header class="bg-gray-900 text-gray-100 py-4 shadow-lg fixed w-full z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">HackU</h1>
-            <nav class="hidden md:block">
-                <ul class="flex space-x-4">
-                    <li><a href="#" class="nav-link text-gray-400 hover:text-white transition duration-300">Home</a>
-                    </li>
-                    <li><a href="#" class="nav-link text-gray-400 hover:text-white transition duration-300">About</a>
-                    </li>
-                    <li><a href="#" class="nav-link text-gray-400 hover:text-white transition duration-300">Projects</a>
-                    </li>
-                    <li><a href="#" class="nav-link text-gray-400 hover:text-white transition duration-300">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="md:hidden">
-                <button id="menu-btn" class="text-gray-400 focus:outline-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-            </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Selected work by David Rodríguez Elipe across AI, real-time systems, and security." />
+    <title>HackU — David Rodríguez Elipe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#top">hack<span>u</span>.</a>
+      <nav><a href="#roadmap">Work</a><a href="#about">About</a><a href="https://github.com/d-r-e" target="_blank" rel="noopener">GitHub ↗</a></nav>
     </header>
-
-    <div id="mobile-menu" class="md:hidden bg-gray-900 text-gray-100 py-4">
-        <ul class="space-y-4">
-            <li><a href="#" class="nav-link text-gray-400 hover:text-white transition duration-300 block">Home</a></li>
-            <!-- <!-- <li><a href="#" class="nav-link text-gray-400 hover:text-white transition duration-300 block">About</a></li> -->
-            <li><a  href="https://github.com/d-r-e" rel="noopener"
-                        target="_blank" class="nav-link text-gray-400 hover:text-white transition duration-300 block">Projects</a>
-            </li>
-            <!-- <li><a href="#" class="nav-link text-gray-400 hover:text-white transition duration-300 block">Contact</a>  -->
-            </li>
-        </ul>
-    </div>
-
-    <main class="container mx-auto py-20 px-4">
-        <section class="fade-in">
-            <h2 class="text-3xl font-bold mb-4">Links</h2>
-            <ul class="space-y-4">
-                <li><a href="https://github.com/d-r-e"
-                        class="link-item text-xl hover:text-blue-400 transition duration-300" rel="noopener"
-                        target="_blank">GitHub</a></li>
-                <li><a href="https://rncp.hacku.org/rncp"
-                        class="link-item text-xl hover:text-blue-400 transition duration-300" rel="noopener"
-                        target="_blank">RNCP Planner</a></li>
-                <li><a href="https://d-r-e.github.io/mitre-tarot/"
-                        class="link-item text-xl hover:text-blue-400 transition duration-300" rel="noopener"
-                        target="_blank">MITRE ATT&CK Tarot</a></li>
-            </ul>
-        </section>
+    <main id="top">
+      <section class="hero">
+        <p class="eyebrow">DAVID RODRÍGUEZ ELIPE · MADRID</p>
+        <h1>Building tools with<br /><em>signal and soul.</em></h1>
+        <p class="hero-copy">A roadmap through local AI, real-time multiplayer systems, cybersecurity, and the interfaces that make technical things feel human.</p>
+        <p class="hero-actions"><a class="button button-primary" href="#roadmap">Follow the roadmap ↓</a><a class="button button-quiet" href="https://github.com/d-r-e" target="_blank" rel="noopener">View GitHub ↗</a></p>
+        <i class="orbit orbit-one"></i><i class="orbit orbit-two"></i>
+      </section>
+      <section class="principles"><p><span>01</span> Local intelligence</p><p><span>02</span> Shared, real-time moments</p><p><span>03</span> Security made legible</p></section>
+      <section class="roadmap" id="roadmap">
+        <div class="section-heading"><p class="eyebrow">SELECTED WORK</p><h2>A growing roadmap.</h2><p>Projects grouped by the problems they explore—not just the tools they use.</p></div>
+        <div class="timeline">
+          <article class="project project-featured project-audio"><div class="project-index">NOW · 01</div><div class="project-art art-stem"><span>✦</span></div><div class="project-body"><p class="project-type">MUSIC AI · APPLE SILICON</p><h3>Stem Studio</h3><p>Music source separation with a synchronized browser mixer, from a quick vocal split to a detailed 53-stem session.</p><ul class="tags"><li>MLX</li><li>Audio ML</li><li>Gradio</li></ul><p class="project-links"><a href="https://huggingface.co/spaces/d-r-e/audio-separator" target="_blank" rel="noopener">Try the live demo ↗</a><a href="https://github.com/d-r-e/stem-studio" target="_blank" rel="noopener">Source ↗</a></p></div></article>
+          <article class="project project-audible"><div class="project-index">NOW · 02</div><div class="project-art art-audible"><span>≋</span></div><div class="project-body"><p class="project-type">GENERATIVE AUDIO · LOCAL-FIRST</p><h3>Audible</h3><p>Voice-cloned long-form narration on your own machine, with a playback-first generation queue and content-addressed WAV cache.</p><ul class="tags"><li>Chatterbox</li><li>MLX</li><li>FastAPI</li></ul><p class="project-links"><a href="https://github.com/d-r-e/audible" target="_blank" rel="noopener">Explore the project ↗</a></p></div></article>
+          <article class="project project-hitster"><div class="project-index">NOW · 03</div><div class="project-art art-hitster"><span>♪</span></div><div class="project-body"><p class="project-type">REAL-TIME MULTIPLAYER · MUSIC</p><h3>Hitster</h3><p>A mobile-first music timeline game for 1–8 people. One player DJs; every phone stays synchronized with the round.</p><ul class="tags"><li>React</li><li>Socket.IO</li><li>Spotify</li></ul><p class="project-links"><a href="https://hitster.hacku.org" target="_blank" rel="noopener">Play Hitster ↗</a><a href="https://github.com/d-r-e/hitster" target="_blank" rel="noopener">Source ↗</a></p></div></article>
+          <article class="project project-rncp"><div class="project-index">SHIPPED · 04</div><div class="project-art art-rncp"><span>↗</span></div><div class="project-body"><p class="project-type">EDUCATION · DECISION TOOL</p><h3>RNCP Planner</h3><p>An interactive planner that turns the opaque RNCP title requirements at 42 School into a route students can understand and act on.</p><ul class="tags"><li>TypeScript</li><li>Information design</li></ul><p class="project-links"><a href="https://rncp.hacku.org" target="_blank" rel="noopener">Open planner ↗</a><a href="https://github.com/d-r-e/rncp" target="_blank" rel="noopener">Source ↗</a></p></div></article>
+          <article class="project project-tarot"><div class="project-index">SECURITY · 05</div><div class="project-art art-tarot"><span>☽</span></div><div class="project-body"><p class="project-type">SECURITY · VISUAL LEARNING</p><h3>MITRE ATT&amp;CK Tarot</h3><p>A tactile, memorable way to explore MITRE ATT&amp;CK tactics: a tarot collection that makes a dense security framework easier to navigate and discuss.</p><ul class="tags"><li>TypeScript</li><li>Security</li></ul><p class="project-links"><a href="https://d-r-e.github.io/mitre-tarot/" target="_blank" rel="noopener">Draw a card ↗</a><a href="https://github.com/d-r-e/mitre-tarot" target="_blank" rel="noopener">Source ↗</a></p></div></article>
+          <article class="project project-woody"><div class="project-index">SECURITY · 06</div><div class="project-art art-woody"><span>⌘</span></div><div class="project-body"><p class="project-type">BINARY ENGINEERING · ELF</p><h3>Woody Woodpacker</h3><p>An ELF binary packer built to understand executable layout, loading, and the boundary between a program and the system that runs it.</p><ul class="tags"><li>C</li><li>ELF</li><li>Reverse engineering</li></ul><p class="project-links"><a href="https://github.com/d-r-e/woody_woodpacker" target="_blank" rel="noopener">Explore the project ↗</a></p></div></article>
+          <article class="project project-death"><div class="project-index">SECURITY · 07</div><div class="project-art art-death"><span>†</span></div><div class="project-body"><p class="project-type">MALWARE RESEARCH · ASSEMBLY</p><h3>Death</h3><p>A 42 cybersecurity-branch project focused on low-level malware techniques, written as a contained research exercise in systems and binary behavior.</p><ul class="tags"><li>Assembly</li><li>Linux</li><li>Security research</li></ul><p class="project-links"><a href="https://github.com/d-r-e/death" target="_blank" rel="noopener">Explore the project ↗</a></p></div></article>
+          <article class="project project-misp"><div class="project-index">OPEN SOURCE · 08</div><div class="project-art art-misp"><span>◉</span></div><div class="project-body"><p class="project-type">THREAT INTELLIGENCE · OPEN SOURCE</p><h3>MISP</h3><p>Contributed small fixes to MISP, the open-source platform for sharing, storing, and correlating threat-intelligence indicators.</p><ul class="tags"><li>PHP</li><li>Threat intelligence</li><li>Contributor</li></ul><p class="project-links"><a href="https://www.misp-project.org/" target="_blank" rel="noopener">Visit MISP ↗</a><a href="https://github.com/MISP/MISP" target="_blank" rel="noopener">Source ↗</a></p></div></article>
+          <article class="project project-mcp"><div class="project-index">OPEN SOURCE · 09</div><div class="project-art art-mcp"><span>⌁</span></div><div class="project-body"><p class="project-type">AI TOOLING · OPEN SOURCE</p><h3>GitLab MCP</h3><p>Contributor to zereight/gitlab-mcp, bringing GitLab workflows into the Model Context Protocol ecosystem for AI-assisted development.</p><ul class="tags"><li>TypeScript</li><li>MCP</li><li>Contributor</li></ul><p class="project-links"><a href="https://github.com/zereight/gitlab-mcp" target="_blank" rel="noopener">Explore the project ↗</a></p></div></article>
+        </div>
+      </section>
+      <section class="about" id="about"><p class="eyebrow">THE THROUGH-LINE</p><div><h2>Curious systems,<br />made usable.</h2><p>From security education to music and generative audio, I’m drawn to the point where difficult systems become an experience people can actually use. I care about the underlying engineering and the feeling on the other side of the screen.</p><a class="button button-primary" href="https://github.com/d-r-e" target="_blank" rel="noopener">More on GitHub ↗</a></div></section>
     </main>
-
-    <footer class="bg-gray-900 text-gray-400 py-4 text-center border-t border-gray-800">
-        <p id="copyright-footer-p">&copy;<span id="copyright-year"></span> Hacku.org </p>
-    </footer>
-
-    <button id="back-to-top"
-        class="fixed bottom-10 right-10 bg-blue-500 text-white p-2 rounded-full shadow-lg hover:bg-blue-600 transition duration-300"
-        title="Back to top">↑</button>
-
-    <script>
-        document.querySelector('#copyright-year').textContent = new Date().getFullYear();
-
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        const backToTopBtn = document.getElementById('back-to-top');
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopBtn.classList.remove('hidden');
-            } else {
-                backToTopBtn.classList.add('hidden');
-            }
-        });
-
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
-</body>
-
+    <footer><p>© <span id="year"></span> David Rodríguez Elipe</p><a href="#top">Back to top ↑</a></footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
 </html>
